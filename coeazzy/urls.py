@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/',include('hostelmanager.urls')),
+    url(r'^management/',include('administration.urls')),
 ]

@@ -1,0 +1,48 @@
+{% extends 'administration/admin-dashboard.html' %}
+{% block content %}
+<div class="container">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-header text-center"><strong>Registered Clients</strong></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-success table-responsive">
+            <thead class="thead-inverse">
+               <tr>
+                   <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Email Address</th>
+                    <th>Action</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for client in client_list %}
+
+                    <tr>
+                        <td>{{client.first_name}}</td>
+                        <td>{{client.last_name}}</td>
+                        <td>{{client.phone}}</td>
+                        <td>{{client.email}}</td>
+                        <td><a href="" ><button class="btn btn-success">View Profile</button></a></td>
+                    </tr>
+
+
+               {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+ </div>
+
+   <ul>
+
+   </ul>
+{% endblock %}

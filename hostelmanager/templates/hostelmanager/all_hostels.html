@@ -1,0 +1,107 @@
+{% extends 'hostelmanager/hostelmanager-dashboard.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-12"><div class="page-header text-center"><strong>Summary Report</strong></div> </div>
+</div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">140</div>
+                                        <div>Registered Rooms</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">8</div>
+                                        <div>Hostels</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">120</div>
+                                        <div> Occupied Rooms</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-support fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">5</div>
+                                        <div>Free Rooms</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-offset-4 col-sm-4">
+                <div class="page-header text-center"><strong>All registered Hostels</strong></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-10">
+                <table class="table table-striped table-primary">
+                    <thead>
+                       <tr>
+                           <th>Hostel Name</th>
+                           <th>Hostel Location</th>
+                           <th>Number Of Rooms</th>
+                           <th>Rent</th>
+                           <th>Action</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        {% for hostel in all_hostels %}
+                          <tr>
+                              <td>{{hostel.hostel_name}}</td>
+                              <td>{{hostel.location}}</td>
+                              <td>{{hostel.rooms}}</td>
+                              <td>{{hostel.rent}}</td>
+                              <td><a href=""><button type="submit" class="btn btn-success">View Report</button> </a> </td>
+                          </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

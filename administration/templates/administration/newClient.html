@@ -1,0 +1,78 @@
+{% extends 'administration/admin-dashboard.html' %}
+{% block content %}
+<div class="container">
+    <form method="post" action="(% url 'administration:registerclient' %}">
+         {% csrf_token %}
+        <div class="panel panel-default">
+            <div class="panel-header"><div class="page-header text-center"><strong>New Client Registration Form</strong></div> </div>
+       <div class="panel-body">
+
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-4">
+            <div class="form-group">
+                <label for="idno">ID Number</label>
+                <input type="text" class="form-control" id="idno" name="idno">
+            </div>
+        </div>
+
+         <div class="col-sm-4">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" name="fname">
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+        <div class="col-sm-offset-2 col-sm-4">
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" name="lname">
+            </div>
+        </div>
+
+         <div class="col-sm-4">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone" name="phone">
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+        <div class="col-sm-offset-2 col-sm-4">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+
+        </div>
+
+         <div class="col-sm-4">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+        </div>
+    </div>
+           <div class="page-header"></div>
+           <div class="row">
+               <div class="col-sm-12">
+                   <p class="text-center">You agree to <a href="">CoEazzy terms and conditions</a></p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-sm-offset-4 col-sm-4">
+                   <button type="submit" class="btn btn-block btn-success"><span class="glyphicon glyphicon-user"></span>  Register</button>
+               </div>
+           </div>
+   </div>
+            <div class="panel-footer">
+                <p class="text-center">CoEazzy &copy 2017</p>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+{% endblock %}

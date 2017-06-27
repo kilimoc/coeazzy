@@ -1,0 +1,17 @@
+.navbar-default{
+     background-color:#E78200;
+
+
+}
+.jumbotron{
+  background-image:url('./media/background.jpg')
+  }
+  .footer{
+  text-decoration:overline;
+  min-height:100px;
+  bottom:0;
+  }
+
+  .navbar-collapse{
+   background-color:#E78200;
+  }

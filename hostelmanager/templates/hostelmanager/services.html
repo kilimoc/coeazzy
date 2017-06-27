@@ -1,0 +1,60 @@
+{% extends 'hostelmanager/index.html' %}
+{% block content %}
+{% load staticfiles %}
+<div class="row">
+    <div class="jumbotron">
+        <h3>Get the best software product for your housing and get it managed on your phone.</h3>
+    </div>
+
+</div>
+<div class="row">
+
+    <div class="col-sm-12">
+        <div class="page-header text-center"><h2>Our Services</h2></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="page-header"><strong>Online Payment Services</strong></div>
+        <p><img src="{% static 'media/payment.jpg' %}" class="img-rounded" alt="Payment" width="304" height="236"></p>
+        <p><strong>CoEazzy</strong> considers your Tenants with all the heart ensuring that they have a good life.Our clients can pay rent in their comfort zones
+            and ensure that the records are well managed.Our application ensures <strong>m~Pesa</strong> rental payments are used and managed well within the system
+        </p>
+        <p>Our Payment module ensures payment payment of rental services through.</p>
+        <ul>
+            <li>M~Pesa</li>
+            <li>Airtel Money</li>
+            <li>Eazzy Pay</li>
+        </ul>
+
+    </div>
+    <div class="col-md-4">
+        <div class="page-header"><strong>Instant SMS Reminder</strong></div>
+        <p><img src="{% static 'media/messaging.png' %}" class="img-rounded" alt="Messaging" width="304" height="236"></p>
+        <p>Would you like to pass an information to all your tenants at once?.<strong>CoEazzy</strong> has catered for that .You can send an sms to all
+         your tenants at once.The application will also ensure reminding your clients on late payment of rental fees. </p>
+
+    </div>
+    <div class="col-md-4">
+        <div class="page-header"><strong>Hostel Manager Assistant</strong></div>
+        <p><img src="{% static 'media/manager.jpg' %}" class="img-rounded" alt="Manager" width="304" height="236"></p>
+        <p>Our system is backed with an Hostel Manager which ensures that you can easilly manage your hostels
+            .You can know all <strong>free rooms</strong> in an hostel ,occupied rooms among other activities that an hostel agent can do. </p>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="row">
+        <div class="col-sm-12"><div class="page-header text-center"><h2>Meet Our Clients</h2></div> </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">Mr.Kaburu</div>
+        <div class="col-sm-3">Mr.Riobs</div>
+        <div class="col-sm-3">Mr.James Ng'ang'a</div>
+        <div class="col-sm-3">Mr.Patrick Gitau</div>
+    </div>
+</div>
+
+{% endblock %}

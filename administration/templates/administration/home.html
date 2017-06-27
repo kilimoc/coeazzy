@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CoEazzy Administration</title>
+    {% load staticfiles %}
+    <!--Load the static css files-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+     <link rel="stylesheet" href="{% static 'css/coeazzycustom.css' %}"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+       <div class="col-md-offset-4 col-md-4">
+
+           <form>
+               <div class="panel panel-success">
+                   <div class="panel-heading text-center">Admin Login Form</div>
+                   <div class="panel-body">
+                       <form method="post" action="">
+                          <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text"  name="username" class="form-control" id="username">
+                          </div>
+                          <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" name="password" class="form-control" id="pwd">
+                          </div>
+                           <a href="{% url 'administration:dashboard' %}"><button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-log-in"></span> Login</button></a>
+                       </form>
+                   </div>
+                   <div class="panel-footer text-center">CoEazzy &copy  2017 </div>
+               </div>
+               </form>
+       </div>
+   </div>
+    </div>
+
+</body>
+</html>

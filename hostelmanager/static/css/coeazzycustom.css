@@ -1,12 +1,15 @@
+
 .navbar-default{
      background-color:#E78200;
 
+}
+.navbar-brand{
+ font-family:'Satisfy',cursive;
+ font-size:32px;
 
 }
-.jumbotron{
-  background-image:url('./media/background.jpg')
-  }
-  .footer{
+
+.footer{
   text-decoration:overline;
   min-height:100px;
   bottom:0;

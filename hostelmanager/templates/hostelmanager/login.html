@@ -1,0 +1,25 @@
+{% extends 'hostelmanager/index.html' %}
+{% block content %}
+   <div class="row">
+       <div class="col-md-offset-4 col-md-4">
+
+            <div class="panel panel-success">
+                   <div class="panel-heading text-center">Login Form</div>
+                   <div class="panel-body">
+                       <form method="post" action="">
+
+                             {% csrf_token %}
+                          <div class="form-group">
+                              <label for="username">{{form.label_tag}}</label>
+                              <div class="col-sm-5" >{{form.as_p}}</div>
+                          </div>
+                          <button type="submit" class="btn btn-success btn-block">Submit</button>
+                       </form>
+                   </div>
+                   <div class="panel-footer text-center">CoEazzy &copy  2017 </div>
+               </div>
+
+
+       </div>
+   </div>
+{% endblock %}
