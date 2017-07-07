@@ -70,7 +70,7 @@
     <div class="row">
         <div class="row">
             <div class="col-sm-offset-4 col-sm-4">
-                <div class="page-header text-center"><strong>All registered Hostels</strong></div>
+                <div class="page-header text-center"><strong>All registered Hostels For Specific Hostel Owners</strong></div>
             </div>
         </div>
         <div class="row">
@@ -92,7 +92,7 @@
                               <td>{{hostel.location}}</td>
                               <td>{{hostel.rooms}}</td>
                               <td>{{hostel.rent}}</td>
-                              <td><a href=""><button type="submit" class="btn btn-success">View Report</button> </a> </td>
+                              <td><a href="{% url 'hostelmanager:hostelreport' %}"><button type="submit" class="btn btn-success">View Report</button> </a> </td>
                           </tr>
                         {% endfor %}
                     </tbody>

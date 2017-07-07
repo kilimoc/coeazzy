@@ -1,0 +1,79 @@
+{% extends 'hostelmanager/hostelmanager-dashboard.html' %}
+{% block content %}
+{% load staticfiles %}
+<div class="container">
+<div class="row">
+    <div class="page-header text-center"><strong>Hostel Report</strong></div>
+    <div class="col-md-6">
+         <div class="row">
+             <div class="col-md-6"><h5><strong>NAME</strong></h5></div>
+             <div class="col-md-6"><h5>SELINE HOSTEL</h5></div>
+         </div>
+        <div class="row">
+             <div class="col-md-6"><h5><strong>LOCATION</strong></h5></div>
+             <div class="col-md-6"><h5>NYERI VIEW</h5></div>
+         </div>
+        <div class="row">
+             <div class="col-md-6"><h5><strong>TOTAL ROOMS</strong></h5></div>
+             <div class="col-md-6"><h5>56</h5></div>
+         </div>
+        <div class="row">
+             <div class="col-md-6"><h5><strong>OCCUPIED ROOMS</strong></h5></div>
+             <div class="col-md-6"><h5>70</h5></div>
+         </div>
+        <div class="row">
+            <div class="col-md-6"><h5><strong>FREE ROOMS</strong></h5></div>
+             <div class="col-md-6"><h5>16</h5></div>
+         </div>
+    </div>
+
+    <div class="col-md-6">
+        <img src="{% static 'media/pinnacle.jpg' %}"  class="img-responsive img-circle" height="300px" width="300px" >
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header text-center"><strong>Tenant Information Of The Hostel</strong></div>
+              </div>
+        </div>
+        <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+              <table class="table table-striped table-primary">
+                    <thead>
+                       <tr>
+                           <th>Tenant Name</th>
+                           <th>Occupied Room</th>
+                           <th>Phone Number</th>
+                           <th>Payment Status</th>
+                           <th>Action</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        {% for hostel in all_hostels %}
+                          <tr>
+                              <td>{{hostel.hostel_name}}</td>
+                              <td>{{hostel.location}}</td>
+                              <td>{{hostel.rooms}}</td>
+                              <td>{{hostel.rent}}</td>
+                              <td><a href="{% url 'hostelmanager:hostelreport' %}"><button type="submit" class="btn btn-success">View Report</button> </a> </td>
+                          </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

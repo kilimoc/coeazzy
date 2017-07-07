@@ -19,18 +19,33 @@
             <div class="page-header">
                 <!--This is navigation-->
                 <nav class="navbar navbar-default navbar-fixed-top">
-              <div class="container">
+              <div class="container newcontainer">
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
                   <a class="navbar-brand" href="#">CoEazzy</a>
                 </div>
-                <ul class="nav navbar-nav navbar-right">
+                  <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="nav navbar-nav navbar-left ">
                    <li><a href=""><span class="glyphicon glyphicon-home"></span> Home</a></li>
                   <li><a href="{% url 'hostelmanager:about' %}">About Us</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list"></span> Our Products<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'hostelmanager:products' %}">M~Nyumba</a> </li>
+                             <li><a href="">M~Leta</a> </li>
+
+                        </ul>
+                    </li>
                     <li><a href="{% url 'hostelmanager:services' %}"><span class="glyphicon glyphicon-bell"></span>Our Services</a></li>
-                  <li><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="{% url 'hostelmanager:dashboard' %}">Dasboard</a></li>
+                    <li><a href="{% url 'hostelmanager:about' %}">Our Partners</a></li>
+                </ul>
+                  <ul class="nav navbar-nav navbar-right">
                   <li><a href="{% url 'hostelmanager:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
+                  </div>
               </div>
             </nav>
             <!--End of navigation-->
@@ -43,7 +58,7 @@
 
         {% endblock %}
     </div>
-    <div class="page-header"></div>
+
 <footer class="footer">
     <div class="row">
         <div class="col-sm-4">

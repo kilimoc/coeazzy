@@ -15,6 +15,8 @@ def getHome(request):
 
 def getAbout(request):
     return render(request,'hostelmanager/about.html')
+def getHeader(request):
+    return render(request,'hostelmanager/header.html')
 def getLogin(request):
     return render(request, 'hostelmanager/login.html')
 
@@ -22,7 +24,8 @@ def getDashboard(request):
     return render(request,'hostelmanager/hostelmanager-dashboard.html')
 def renderHostels(request):
     return render(request,'hostelmanager/all_hostels.html')
-
+def renderProducts(request):
+    return render(request,'hostelmanager/products.html')
 #New object to database.
 class HostelCreate(CreateView):
     model = Hostel
@@ -57,3 +60,12 @@ def user_login(request):
     else:
         form=LoginForm()
     return render(request,'hostelmanager/login.html',{'form':form})
+
+
+class getSpecificHostelReport(generic.ListView):
+    context_object_name = 'all_hostels'
+    template_name = 'hostelmanager/hostel_report.html'
+
+    def get_queryset(self):
+        return Hostel.objects.all()
+
